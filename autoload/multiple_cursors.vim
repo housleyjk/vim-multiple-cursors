@@ -96,8 +96,8 @@ endfunction
 " is created at the end of the visual selection. Another cursor will be
 " attempted to be created at the next occurrence of the visual selection
 function! multiple_cursors#new(mode)
+  :NeoCompleteLock
   if a:mode ==# 'n'
-    :NeoCompleteLock
     " Reset all existing cursors, don't restore view and setting
     call s:cm.reset(0, 0)
 
